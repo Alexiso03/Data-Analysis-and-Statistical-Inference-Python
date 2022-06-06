@@ -71,10 +71,61 @@ Hypothesis
 
 ### 2. Machine learning statistical classification for loan dataset
 
-Dataset: [Loan Dataset]([https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-ML0101EN-SkillsNetwork/labs/FinalModule_Coursera/data/loan_train.csv))
-
+Dataset: [Loan_Dataset](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-ML0101EN-SkillsNetwork/labs/FinalModule_Coursera/data/loan_train.csv)
+##
 About dataset:
 This dataset is about past loans. The Loan_train.csv data set includes details of 346 customers whose loan are already paid off or defaulted. It includes following fields:
 
 ![image](https://user-images.githubusercontent.com/86974424/172117387-a7fc9e92-ed69-4ab9-8101-a7bd2487025c.png)
+##
 
+This notebook uses scikit-learn, matplotlib, itertools, pandas and numpy for effective statistical and visualization analysis.
+
+1. Visualization of principal amount and loan_status while considering both genders differently:
+
+![image](https://user-images.githubusercontent.com/86974424/172126756-809a285f-12c3-46ab-b6b7-99194b82526e.png)
+##
+2. Visualization of age and loan_status while considering both genders differently:
+
+![image](https://user-images.githubusercontent.com/86974424/172126917-60e5fa91-ea47-4794-b206-1f2084104608.png)
+##
+3. Visualization of dayofweek and loan_status while considering both genders differently:
+
+![image](https://user-images.githubusercontent.com/86974424/172127141-bc8cd3ba-3dc2-43f4-be83-6c2b1a665add.png)
+##
+
+### Classification Methods:
+
+1. K Nearest Neighbor(KNN)
+2. Decision Tree
+3. Support Vector Machine
+4. Logistic Regression
+
+- KNN: The best accuracy was 0.7857142857142857 with k= 7
+- Decision Tree: DecisionTrees's Accuracy:  0.6142857142857143
+- Logistic Regression Modelling: LogisticRegression(C=0.01, solver='liblinear')
+
+## Model Evaluation using Test set
+
+Loan Dataset for testing: [Test_Dataset](https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/loan_test.csv)
+
+# Result ~ Obtaining Jaccard and F1 score for different methods:
+
+- `KNN`:
+<br>Jaccard Score:  0.6041666666666666
+<br>F1-Score:  0.658318980899626
+
+- `Decision Tree`:
+<br>Jaccard Score:  0.6590909090909091
+<br>F1-Score:  0.7366818873668188
+
+- `SVM`:
+<br>Jaccard Score:  0.78
+<br>F1-Score:  0.7583503077293734
+
+- `Logistic Regression`:
+<br>Jaccard Score:  0.7358490566037735
+<br>F1-Score:  0.6604267310789049
+<br>Log Loss:  0.5672153379912981
+
+### Through this we can easily tell that Support Vector Machine or SVM is the best choice to proceed forward with statistic evaluation.
